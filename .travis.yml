@@ -17,3 +17,4 @@ deploy:
   app: "waninger"
   env: "Waninger-env"
   bucket_name: "elasticbeanstalk-us-east-1-701856502070"
+  acl: bucket_owner_full_control
