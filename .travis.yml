@@ -13,7 +13,7 @@ deploy:
   access_key_id: "aws_virginia1"
   secret_access_key:
     secure: "%userprofile%/.ssh/aws_virginia1.pem"
-  region: "us-east-1b"
+  region: "us-east-1"
   app: "waninger"
   env: "Waninger-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-1-701856502070"
+  bucket_name: "elasticbeanstalk-us-east-1-701856502070"
