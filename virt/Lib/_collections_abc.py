@@ -866,7 +866,7 @@ class Sequence(Reversible, Collection):
 
     """All the operations on a read-only sequence.
 
-    Concrete subclasses must override __new__ or __init__,
+    Concrete subclasses must override __new__ or __init__.py,
     __getitem__, and __len__.
     """
 
@@ -945,7 +945,7 @@ class MutableSequence(Sequence):
 
     """All the operations on a read-write sequence.
 
-    Concrete subclasses must provide __new__ or __init__,
+    Concrete subclasses must provide __new__ or __init__.py,
     __getitem__, __setitem__, __delitem__, __len__, and insert().
 
     """

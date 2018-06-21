@@ -97,7 +97,7 @@ class HMAC:
 
         An update to this copy won't affect the original object.
         """
-        # Call __new__ directly to avoid the expensive __init__.
+        # Call __new__ directly to avoid the expensive __init__.py.
         other = self.__class__.__new__(self.__class__)
         other.digest_cons = self.digest_cons
         other.digest_size = self.digest_size

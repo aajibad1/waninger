@@ -422,7 +422,7 @@ def _find_module_shim(self, fullname):
     # return None.
     loader, portions = self.find_loader(fullname)
     if loader is None and len(portions):
-        msg = 'Not importing directory {}: missing __init__'
+        msg = 'Not importing directory {}: missing __init__.py'
         _warnings.warn(msg.format(portions[0]), ImportWarning)
     return loader
 
@@ -530,7 +530,7 @@ def spec_from_file_location(name, location=None, *, loader=None,
     empty list is sufficient, though its not otherwise useful to the
     import system.
 
-    The loader must take a spec as its only __init__() arg.
+    The loader must take a spec as its only __init__.py() arg.
 
     """
     if location is None:
@@ -660,11 +660,11 @@ class _LoaderBasics:
 
     def is_package(self, fullname):
         """Concrete implementation of InspectLoader.is_package by checking if
-        the path returned by get_filename has a filename of '__init__.py'."""
+        the path returned by get_filename has a filename of '__init__.py.py'."""
         filename = _path_split(self.get_filename(fullname))[1]
         filename_base = filename.rsplit('.', 1)[0]
         tail_name = fullname.rpartition('.')[2]
-        return filename_base == '__init__' and tail_name != '__init__'
+        return filename_base == '__init__.py' and tail_name != '__init__.py'
 
     def create_module(self, spec):
         """Use default semantics for module creation."""
@@ -933,7 +933,7 @@ class ExtensionFileLoader(FileLoader, _LoaderBasics):
     def is_package(self, fullname):
         """Return True if the extension module is a package."""
         file_name = _path_split(self.path)[1]
-        return any(file_name == '__init__' + suffix
+        return any(file_name == '__init__.py' + suffix
                    for suffix in EXTENSION_SUFFIXES)
 
     def get_code(self, fullname):
@@ -1255,7 +1255,7 @@ class FileFinder:
         if cache_module in cache:
             base_path = _path_join(self.path, tail_module)
             for suffix, loader_class in self._loaders:
-                init_filename = '__init__' + suffix
+                init_filename = '__init__.py' + suffix
                 full_path = _path_join(base_path, init_filename)
                 if _path_isfile(full_path):
                     return self._get_spec(loader_class, fullname, full_path, [base_path], target)

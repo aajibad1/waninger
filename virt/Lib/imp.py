@@ -203,7 +203,7 @@ def load_package(name, path):
         extensions = (machinery.SOURCE_SUFFIXES[:] +
                       machinery.BYTECODE_SUFFIXES[:])
         for extension in extensions:
-            init_path = os.path.join(path, '__init__' + extension)
+            init_path = os.path.join(path, '__init__.py' + extension)
             if os.path.exists(init_path):
                 path = init_path
                 break
@@ -281,7 +281,7 @@ def find_module(name, path=None):
     for entry in path:
         package_directory = os.path.join(entry, name)
         for suffix in ['.py', machinery.BYTECODE_SUFFIXES[0]]:
-            package_file_name = '__init__' + suffix
+            package_file_name = '__init__.py' + suffix
             file_path = os.path.join(package_directory, package_file_name)
             if os.path.isfile(file_path):
                 return None, package_directory, ('', '', PKG_DIRECTORY)

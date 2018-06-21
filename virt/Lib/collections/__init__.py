@@ -88,7 +88,7 @@ class OrderedDict(dict):
         regular dictionaries.  Keyword argument order is preserved.
         '''
         if not args:
-            raise TypeError("descriptor '__init__' of 'OrderedDict' object "
+            raise TypeError("descriptor '__init__.py' of 'OrderedDict' object "
                             "needs an argument")
         self, *args = args
         if len(args) > 1:
@@ -526,7 +526,7 @@ class Counter(dict):
 
         '''
         if not args:
-            raise TypeError("descriptor '__init__' of 'Counter' object "
+            raise TypeError("descriptor '__init__.py' of 'Counter' object "
                             "needs an argument")
         self, *args = args
         if len(args) > 1:
@@ -963,7 +963,7 @@ class UserDict(MutableMapping):
     # Start by filling-out the abstract methods
     def __init__(*args, **kwargs):
         if not args:
-            raise TypeError("descriptor '__init__' of 'UserDict' object "
+            raise TypeError("descriptor '__init__.py' of 'UserDict' object "
                             "needs an argument")
         self, *args = args
         if len(args) > 1:

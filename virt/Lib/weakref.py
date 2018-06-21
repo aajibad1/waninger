@@ -101,7 +101,7 @@ class WeakValueDictionary(collections.MutableMapping):
 
     def __init__(*args, **kw):
         if not args:
-            raise TypeError("descriptor '__init__' of 'WeakValueDictionary' "
+            raise TypeError("descriptor '__init__.py' of 'WeakValueDictionary' "
                             "object needs an argument")
         self, *args = args
         if len(args) > 1:
