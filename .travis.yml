@@ -16,5 +16,4 @@ deploy:
   region: "us-east-1"
   app: "waninger"
   env: "Waninger-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-1-701856502070"
-  acl: bucket_owner_full_control
+  bucket_name: "d41d8cd98f00b204e9800998ecf8427e"
