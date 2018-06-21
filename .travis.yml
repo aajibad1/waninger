@@ -16,4 +16,4 @@ deploy:
   region: "us-east-1"
   app: "waninger"
   env: "Waninger-env"
-  bucket_name: "waninger-awsebs"
+  bucket_name: "elasticbeanstalk-us-east-1-701856502070"
