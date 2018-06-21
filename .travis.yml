@@ -17,3 +17,6 @@ deploy:
   app: "waninger"
   env: "Waninger-env"
   bucket_name: "elasticbeanstalk-us-east-1-701856502070"
+
+after_success:
+  - coveralls
