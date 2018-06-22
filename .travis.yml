@@ -20,5 +20,5 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-1-701856502070"
 
 after_success:
-  - coveralls
   - coverage report
+  - coveralls
