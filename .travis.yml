@@ -8,6 +8,7 @@ install:
 script:
   - flake8
   - coverage run -m pytest tests/
+  - coverage report
 
 deploy:
   provider: elasticbeanstalk
