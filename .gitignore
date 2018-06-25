@@ -1,7 +1,11 @@
 .idea/
-env/
-tests/.pytest_cache/
-.pytest_cache/
+
 *__pycache__*
 *.pytest_cache*
+*.pyc
+
 .coverage
+
+*.egg-info
+
+build/

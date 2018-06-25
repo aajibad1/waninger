@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luke Waninger</title>
+<meta name="keywords" content="luke waninger developer data science washington seattle" />
+<meta name="description" content="A personal portfolio for Luke Waninger" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Luke Waninger</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="{{ url_for('about') }}" title="">About Me</a></li>
+				<li><a href="{{ url_for('projects') }}" title="">Projects</a></li>
+				<li><a href="{{ url_for('resume') }}" title="">Resume</a></li>
+				<li><a href="{{ url_for('contact') }}" title="">Contact Me</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+{% block content %}{% endblock %}
+
+<div id="external_links">
+    <a href="https://github.com/lukeWaninger" target="_blank" >
+        <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+    </a>
+    <a href="https://www.linkedin.com/in/luke-waninger-07025967/" target="_blank">
+        <img src="{{ url_for('static', filename='linkedin.png') }}" alt="linkedin"/>
+    </a>
+</div>
+<div id="copyright" class="container">
+    <p>&copy; Luke Waninger. All rights reserved. | Photos by Me</p>
+</div>
+</body>
+</html>
