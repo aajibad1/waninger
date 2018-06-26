@@ -12,7 +12,6 @@ install:
 script:
   - flake8
   - coverage run -m pytest waninger/tests/
-  - pylint waninger
 
 deploy:
   provider: elasticbeanstalk
