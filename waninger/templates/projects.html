@@ -2,9 +2,47 @@
 
 
 {%  block content %}
-    <div id="content" class="container projects">
-        <a>
-            <img >
-        </a>
+    <div id="project-scroller">
+        <script type="text/javascript" src="{{ url_for('static', filename='gestures.js') }}"></script>
+
+        <div class='csslider1 no-autoplay '>
+            <input name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide' checked>
+            <input name="cs_anchor1" id='cs_slide1_1' type="radio" class='cs_anchor slide' >
+            <input name="cs_anchor1" id='cs_slide1_2' type="radio" class='cs_anchor slide' >
+            <ul>
+                <li class="cs_skeleton">
+                    <img src="{{ url_for('static', filename='reddit.jpg') }}" style="width: 100%;">
+                </li>
+                <li class='num0 img slide'>
+                    <img src='{{ url_for('static', filename='reddit.jpg') }}' alt='Reddit Jokes' title='Reddit Jokes' />
+                </li>
+                <li class='num1 img slide'>
+                    <img src='{{ url_for('static', filename='riverrunners.jpg') }}' alt='River Runners' title='River Runners' />
+                </li>
+                <li class='num2 img slide'>
+                    <img src='{{ url_for('static', filename='titanic.jpg') }}' alt='Titanic' title='Titanic' />
+                </li>
+            </ul>
+s
+            <div class='cs_arrowprev'>
+                <label class='num0' for='cs_slide1_0'><span><i></i><b></b></span></label>
+                <label class='num1' for='cs_slide1_1'><span><i></i><b></b></span></label>
+                <label class='num2' for='cs_slide1_2'><span><i></i><b></b></span></label>
+            </div>
+            <div class='cs_arrownext'>
+                <label class='num0' for='cs_slide1_0'><span><i></i><b></b></span></label>
+                <label class='num1' for='cs_slide1_1'><span><i></i><b></b></span></label>
+                <label class='num2' for='cs_slide1_2'><span><i></i><b></b></span></label>
+            </div>
+            <div class='cs_bullets'>
+                <label class='num0' for='cs_slide1_0'> <span class='cs_point'></span></label>
+                <label class='num1' for='cs_slide1_1'> <span class='cs_point'></span></label>
+                <label class='num2' for='cs_slide1_2'> <span class='cs_point'></span></label>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="container">
+
     </div>
 {% endblock %}
