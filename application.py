@@ -10,8 +10,7 @@ from flask import (
 
 BP = Blueprint(
     'default', __name__,
-    template_folder='templates',
-    static_folder='static'
+    template_folder='waninger/templates'
 )
 
 
