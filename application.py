@@ -51,4 +51,5 @@ def create_app(test_config=None):
 
 
 if __name__ == '__main__':
-    create_app().run()
+    application = create_app()
+    application.run()
