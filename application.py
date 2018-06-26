@@ -8,7 +8,7 @@ from flask import (
     Flask, Blueprint, render_template
 )
 
-BP = Blueprint('default', __name__, template_folder='templates')
+BP = Blueprint('default', __name__, template_folder='waninger/templates')
 
 
 @BP.route('/')
