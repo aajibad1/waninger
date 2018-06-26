@@ -13,7 +13,7 @@ script:
   - flake8
   - coverage run -m pytest waninger/tests/
   - pylint waninger
-  - pylint -d duplicate-code tests
+  - pylint -d duplicate-code waninger/tests/
 
 deploy:
   provider: elasticbeanstalk
