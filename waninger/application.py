@@ -8,28 +8,28 @@ from flask import (
     Flask, Blueprint, render_template
 )
 
-bp = Blueprint('default', __name__, template_folder='templates')
+BP = Blueprint('default', __name__, template_folder='templates')
 
 
-@bp.route('/')
+@BP.route('/')
 def home():
     """register route to home"""
     return render_template('index.html')
 
 
-@bp.route('/projects')
+@BP.route('/projects')
 def projects():
     """register route to projects"""
     return render_template('projects.html')
 
 
-@bp.route('/resume')
+@BP.route('/resume')
 def resume():
     """register route to resume"""
     return render_template('resume.html')
 
 
-@bp.route('/contact')
+@BP.route('/contact')
 def contact():
     """register route to contact form"""
     return render_template('contact.html')
@@ -45,7 +45,7 @@ def create_app(test_config=None):
     else:
         app.config.from_mapping(test_config)
 
-    app.register_blueprint(bp)
+    app.register_blueprint(BP)
 
     return app
 

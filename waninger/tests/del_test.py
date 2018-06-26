@@ -11,4 +11,4 @@ class TestRepository(TestCase):
     """a class to delete"""
     def test_nothing(self):
         """a unit test to delete"""
-        self.assertEquals(1, 1)
+        self.assertTrue(1 == 1)
