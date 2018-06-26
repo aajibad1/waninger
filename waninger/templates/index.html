@@ -4,4 +4,53 @@
 <div id="featured">
     <img src="{{ url_for('static', filename='banner.jpg') }}" alt="banner"/>
 </div>
+
+<div id="content" class="container">
+    <br>
+
+    <p>
+        <span class="about-heading">My passion</span> for computer science began during my eight years
+        of
+        military
+            service. I was
+        primarily a small team leader in charge of a communications team with a very broad range of responsibilities.
+        Together, we provided voice and data communications across Southeast Asia and here in the States. Working within
+        United States Special Operations Command offered many privileges, one of which was access to the latest
+        technologies. It was a blast but I continued to find gaps in what our restricted software list could provide.
+        I continued to search for better and more efficient solutions that would be approved under our very strict
+        security requirements. Ultimately, however, I realized that the most effective solutions would be the ones I
+        developed from scratch.
+    </p>
+
+    <p>
+        I’ve spent the last several years <span class="about-heading">building a foundation</span> for Computer and
+        Data Science at Portland State University and the University of Washington. Not only was I learning the
+        basic traits of a computer scientist but continue to hone my interests in data science. The more math,
+        statistics, and algorithms I have learned, the more fascinating the aspects of data science have become.
+        My skills have been finely tuned for this career but where I really want to make a difference is mental
+        health. Throughout eight years of military service I’ve gone through some very difficult times regarding
+        mental health; both personally and with close friends and family. Mental health is a subdomain where I
+        can use my combined passion and skillset to contribute to a cause in which I truly believe.
+    </p>
+
+    <div class="about-image-wrapper">
+        <a href="https://www.army.mil/usasoc" target="_blank">
+            <div class="about-image-inner-wrapper">
+                <img class="about-image" src="{{ url_for('static', filename='usasoc.png') }}" alt="USASOC">
+            </div>
+        </a>
+
+        <a href="https://www.pdx.edu/computer-science/program-objectives-outcomes" target="_blank">
+            <div class="about-image-inner-wrapper">
+                <img class="about-image" src="{{ url_for('static', filename='psu.png') }}" alt="Portland State University">
+            </div>
+        </a>
+
+        <a href="https://www.datasciencemasters.uw.edu/" target="_blank">
+            <div class="about-image-inner-wrapper">
+                <img class="about-image" src="{{ url_for('static', filename='uw.png') }}" alt="University of Washington">
+            </div>
+        </a>
+    </div>
+</div>
 {% endblock %}

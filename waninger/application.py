@@ -1,8 +1,8 @@
 from flask import (
-    Flask, Blueprint, redirect, render_template, url_for
+    Flask, Blueprint, render_template
 )
 
-bp = Blueprint('default', __name__, url_prefix='/')
+bp = Blueprint('default', __name__, template_folder='templates')
 
 
 @bp.route('/')
@@ -10,10 +10,19 @@ def home():
     return render_template('index.html')
 
 
-@bp.route('/about')
-def about():
-    return render_template('about.html')
+@bp.route('/projects')
+def projects():
+    return render_template('projects.html')
 
+
+@bp.route('/resume')
+def resume():
+    return render_template('resume.html')
+
+
+@bp.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 
 def create_app(test_config=None):

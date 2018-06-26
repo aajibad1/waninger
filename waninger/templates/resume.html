@@ -1,5 +1,121 @@
 {% extends 'base.html' %}
 
+
 {%  block content %}
-<h2>Resume</h2>
+    <div id="content" class="container">
+        <div class="resume-heading">
+            <h2>Education</h2>
+        </div>
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td>MS in Data Science</td>
+                    <td>May 2019</td>
+                    <td>University of Washington</td>
+                </tr>
+                <tr>
+                    <td>BS in Computer Science</td>
+                    <td>July 2017</td>
+                    <td>Portland State University</td>
+                </tr>
+                <tr>
+                    <td>C#, ASP.Net, Client-Side certifications</td>
+                    <td>March 2014</td>
+                    <td>O'Reilly School of Technology</td>
+                </tr>
+                <tr>
+                    <td>
+                        Advanced Leadership Course - <em>Distinguished Honor Graduate</em>
+                    </td>
+                    <td>March 2010</td>
+                    <td>United States Army</td>
+                </tr>
+                <tr>
+                    <td>Signal Support Systems Specialist</td>
+                    <td>August 2005</td>
+                    <td>United States Army</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+
+        <div class="resume-heading">
+            <h2>Skill Set</h2>
+        </div>
+        <ul>
+            <li>Strong knowledge of machine-learning techniques, hypothesis testing and regression</li>
+            <li>Languages: Python, SQL, R, C#, C with experience in developing parallel solutions</li>
+            <li>Strong record of working with IT and development projects from inception to client handoff</li>
+            <li>Visualization software: Tableau, Power BI, D3, matplotlib, ggplot</li>
+        </ul>
+
+        <div class="resume-heading">
+            <h2>Experience</h2>
+        </div>
+
+        <div id="experience">
+            <h3>Data Science Intern</h3>
+            <h4>Revel Consulting</h4>
+            <h4>September 2017 - December 2017</h4>
+            <ul>
+                <li>
+                    Developed a data pipeline using Pandas, scikit-learn, and Power BI to ingest, clean, update an ARIMA forecasting model, and provide a live visualization for client fiscal goal monitoring
+                </li>
+                <li>
+                    Authored reports discussing results of data exploration and model findings which provided valuable insights to analytics consulting team
+                </li>
+            </ul>
+
+            <br/>
+
+            <h3>Undegraduate Capstone Project</h3>
+            <h4>Porltand State University</h4>
+            <h4>September 2016 - June 2017</h4>
+            <ul>
+                <li>
+                    Performed requirements gathering, planning and design of application which collects and manages conversational research data for multiple university linguistics departments
+                </li>
+                <li>
+                    Wrote core code base (C#, Entity Framework, Razor, HTML5, CSS3, Javascript, JQuery) for student team to build additional application components
+                </li>
+            </ul>
+
+            <br/>
+
+            <h3>Systems Engineer and Administrator</h3>
+            <h4>Leonie Industries - Kabul, Afghanistan</h4>
+            <h4>May 2013 - February 2014</h4>
+            <ul>
+                <li>
+                    Managed systems and data used by analysts to perform sentiment analysis, media analysis, and media product development
+                </li>
+                <li>
+                    Planned, developed, and maintained SharePoint and InfoPath solutions which bridged cross division workflow for media product planning, development, approval, and distribution
+                </li>
+            </ul>
+
+            <br/>
+
+            <h3>Staff Sergeant, Fort Bragg, NC - United States Army</h3>
+            <h4>Battalion IT Non-Commissioned Officer In-Charge - Special Operations Command</h4>
+            <h4>March 2008 - May 2013</h4>
+            <ul>
+                <li>
+                    Led an IT team of 12 people in systems configuration, architecture, and infrastructure for local and large-scale secure communications (Southeast Pacific, Central Asia, US)
+                </li>
+                <li>
+                    Trained and certified junior Soldiers for global deployment. Received numerous accolades for providing professional and technically skilled personnel to embassy and tactical teams alike
+                </li>
+            </ul>
+
+            <h4>Information Technology Specialist - 82nd Airborne Division</h4>
+            <h4>June 2005 - March 2008</h4>
+            <ul>
+                <li>
+                    Selected as the tactical communications provider for the Brigade Personal Security Detachment throughout deployment in support of Operation Iraqi Freedom
+                </li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}

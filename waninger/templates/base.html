@@ -14,20 +14,21 @@
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">Luke Waninger</a></h1>
+			<h1><a href="{{ url_for('default.home') }}">Luke Waninger</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
-				<li><a href="{{ url_for('about') }}" title="">About Me</a></li>
-				<li><a href="{{ url_for('projects') }}" title="">Projects</a></li>
-				<li><a href="{{ url_for('resume') }}" title="">Resume</a></li>
-				<li><a href="{{ url_for('contact') }}" title="">Contact Me</a></li>
+				<li><a href="{{ url_for('default.projects') }}" title="">Projects</a></li>
+				<li><a href="{{ url_for('default.resume') }}" title="">Resume</a></li>
+				<li><a href="{{ url_for('default.contact') }}" title="">Contact Me</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
 
+<div id="content-wrapper">
 {% block content %}{% endblock %}
+</div>
 
 <div id="external_links">
     <a href="https://github.com/lukeWaninger" target="_blank" >
