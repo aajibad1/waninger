@@ -1,4 +1,5 @@
 .idea/
+virt/
 
 *__pycache__*
 *.pytest_cache*

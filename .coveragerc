@@ -1,5 +1,4 @@
 [run]
 omit =
     *test.py
-    application.py
     *travis/*
