@@ -2,47 +2,95 @@
 
 
 {%  block content %}
-    <div id="project-scroller">
-        <script type="text/javascript" src="{{ url_for('static', filename='gestures.js') }}"></script>
-
-        <div class='csslider1 no-autoplay '>
-            <input name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide' checked>
-            <input name="cs_anchor1" id='cs_slide1_1' type="radio" class='cs_anchor slide' >
-            <input name="cs_anchor1" id='cs_slide1_2' type="radio" class='cs_anchor slide' >
-            <ul>
-                <li class="cs_skeleton">
-                    <img src="{{ url_for('static', filename='reddit.jpg') }}" style="width: 100%;">
-                </li>
-                <li class='num0 img slide'>
-                    <img src='{{ url_for('static', filename='reddit.jpg') }}' alt='Reddit Jokes' title='Reddit Jokes' />
-                </li>
-                <li class='num1 img slide'>
-                    <img src='{{ url_for('static', filename='riverrunners.jpg') }}' alt='River Runners' title='River Runners' />
-                </li>
-                <li class='num2 img slide'>
-                    <img src='{{ url_for('static', filename='titanic.jpg') }}' alt='Titanic' title='Titanic' />
-                </li>
-            </ul>
-s
-            <div class='cs_arrowprev'>
-                <label class='num0' for='cs_slide1_0'><span><i></i><b></b></span></label>
-                <label class='num1' for='cs_slide1_1'><span><i></i><b></b></span></label>
-                <label class='num2' for='cs_slide1_2'><span><i></i><b></b></span></label>
-            </div>
-            <div class='cs_arrownext'>
-                <label class='num0' for='cs_slide1_0'><span><i></i><b></b></span></label>
-                <label class='num1' for='cs_slide1_1'><span><i></i><b></b></span></label>
-                <label class='num2' for='cs_slide1_2'><span><i></i><b></b></span></label>
-            </div>
-            <div class='cs_bullets'>
-                <label class='num0' for='cs_slide1_0'> <span class='cs_point'></span></label>
-                <label class='num1' for='cs_slide1_1'> <span class='cs_point'></span></label>
-                <label class='num2' for='cs_slide1_2'> <span class='cs_point'></span></label>
-            </div>
-        </div>
-    </div>
-
     <div id="content" class="container">
+        <div class="project">
+            <div class="project-title">
+                <h2>Reddit Jokes</h2>
+                <a href="#" target='_blank' title="See it!">
+                    <img src="{{ url_for('static', filename='aws.png') }}" alt="See it!") />
+                </a>
+                <a href="https://github.com/lukeWaninger/Reddit-Topic-Modeling" target="_blank" title="Github">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+                </a>
+            </div>
+            <p>A team of three - Mohammed Helal, Vivek Reddy, and myself - performed topic modeling using LDA over the
+                Reddit joke dataset. This was an exploratory project to more fully understand the nature of LDA and
+                its limitations.</p>
+        </div>
 
+        <div class="project">
+            <div class="project-title">
+                <h2>River Runners</h2>
+                <a href="#" target='_blank' title="See it!">
+                    <img src="{{ url_for('static', filename='aws.png') }}" alt="See it!") />
+                </a>
+                <a href="https://github.com/lukeWaninger/RiverRunner" target="_blank" title="Github">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+                </a>
+            </div>
+            <p>
+                River Runner is a simple web-based tool that allows whitewater kayakers to see flow rate predictions
+                for river runs in Washington state in order to help plan future kayaking trips. By using
+                autoregressive integrated moving average (ARIMA) models on public USGS historical river flow rate
+                data, along with exogenous regressors such as precipitation, snow pack, and temperature, River
+                Runner provides predictions of daily average river flow rates seven days in advance. Results are
+                shown on a plot along with the maximum and minimum runnable flow rates so paddlers can easily see
+                whether the river is predicted to be runnable.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-title">
+                <h2>Kernel-Based Support Vector Machines</h2>
+                <a href="https://notebooks.azure.com/lukewaninger/libraries/SupportVectorMachines" target="_blank">
+                    <img src="{{ url_for('static', filename='azure.png') }}" alt="Azure Notebooks"/>
+                </a>
+                <a href="https://github.com/lukeWaninger/SupportVectorMachines" target="_blank" title="Github">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+                </a>
+            </div>
+            <p>The notebook, SVMKernels.ipynb, displays my implementation of a kernel-based Support Vector Machine.
+                The SVM class is implemented in the notebook while supporting classes and code was implemented in
+                source.py. The source code was extracted from the notebook inorder to maintain readability and keep
+                the notebook focused on the SVM itself rather than other required components (i.e. One vs Rest
+                classifier, parallel progress bar, etc). However, I find both files quite interesting for various
+                reasons.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-title">
+                <h2>Logistic Regression</h2>
+                <a href="https://notebooks.azure.com/lukewaninger/libraries/LogisticRegression" target="_blank">
+                     <img src="{{ url_for('static', filename='azure.png') }}" alt="Azure Notebooks"/>
+                </a>
+                <a href="#" target="_blank" title="Github">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+                </a>
+            </div>
+            <p>
+                The file logistic_regression.py is my implementation of a logistic regression classifier with L2
+                regularization. The optimization problem is solved using the fast-gradient descent algorithm. The
+                classifier uses the inverse of the Lipshitz constant to calculate the initial learning rate and uses
+                backtracking line search to update the learning rate through successive iterations.
+            </p>
+            <p>
+                Jupyter notebook demos for a simulated dataset and the well known Digits dataset are included as
+                well as a performance comparison to scikit-learn.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-title">
+                <h2>Jupyter Widgets</h2>
+                <a href="#" target='_blank' title="See it!">
+                    <img src="{{ url_for('static', filename='chevright.png') }}" alt="See it!") />
+                </a>
+                <a href="#" target="_blank" title="Github">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+                </a>
+            </div>
+            <p></p>
+        </div>
     </div>
 {% endblock %}
