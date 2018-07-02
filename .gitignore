@@ -9,3 +9,5 @@
 *.egg-info
 
 build/
+
+settings.py

@@ -1,10 +1,39 @@
 {% extends 'base.html' %}
 
+{% macro render_field(field) %}
+    <tr>
+        <td class="label_container">{{ field.label }}</td>
+        <td class="input_container">{{ field(**kwargs)|safe }}</td>
+    </tr>
+
+    {% if field.errors %}
+        <tr>
+            <td colspan="2">
+                <ul class="error">
+                    {% for error in field.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    {% endif %}
+
+{% endmacro %}
 
 {%  block content %}
     <div id="content" class="container">
-        <h3>This site is still under construction. For now, please use the email address below.</h3>
-        <h5>Seattle, WA</h5>
-        <h5>luke.waninger@gmail.com</h5>
+        <form id="contact_form" method=post action="/contact">
+            <div><h2>Contact Me</h2></div>
+
+            <div>
+                <table>
+                    {{ render_field(form.name) }}
+                    {{ render_field(form.email) }}
+                    {{ render_field(form.phone) }}
+                    {{ render_field(form.message) }}
+                </table>
+            </div>
+            <div>{{ form.submit(class='input') }}</div>
+        </form>
     </div>
 {% endblock %}
