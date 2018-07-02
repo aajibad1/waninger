@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from flask import Blueprint, Flask, render_template, request
 import settings
 import smtplib
-from wtforms import Form, FormField, IntegerField, StringField, SubmitField, TextAreaField, validators
+from wtforms import Form, StringField, SubmitField, TextAreaField, validators
 
 
 BP = Blueprint(
@@ -70,10 +70,15 @@ def contact():
                f'message:\n{form["message"]}'
 
         send_mail(text, form["email"])
-        return render_template('thanks.html')
+        return thanks()
 
     else:
         return render_template('contact.html', form=form)
+
+
+@BP.route('/thanks')
+def thanks():
+    return render_template('thanks.html')
 
 
 def send_mail(text, to):

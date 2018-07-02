@@ -9,7 +9,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
     font-weight: 300;
-    color: #6c6c6c
+    color: #6c6c6c;
+    min-width: 510px;
 }
 
 ul li {
@@ -91,6 +92,7 @@ ul li {
     top: 1em;
     left: 0;
     width: 100%;
+    padding: 0px 25px;
 }
 
 #logo h1 {
@@ -125,10 +127,11 @@ ul li {
     text-align: center;
 }
 
-#menu li a, #menu li span {
+#menu li a,
+#menu li span {
     display: block;
     padding: 0em 1.5em;
-    margin-top: 2.7em;
+    margin-top: 2.38em;
     height: 50px;
     letter-spacing: 0.20em;
     line-height: 50px;
@@ -193,20 +196,6 @@ ul li {
 }
 
 /*********************************************************************************/
-/* Featured                                                                      */
-/*********************************************************************************/
-#featured {
-    height: 30em;
-    width: 100%;
-}
-
-#featured img {
-    height: 30em;
-    width: 100%;
-    object-fit: cover;
-}
-
-/*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
 #content-wrapper {
@@ -216,6 +205,7 @@ ul li {
 #content {
     position: relative;
     height: 80%;
+    padding: 0 20px;
 }
 
 #content ul {
@@ -230,6 +220,17 @@ ul li {
     text-align: justify;
 }
 
+/*featured*/
+#featured {
+    height: 25em;
+}
+
+#featured img {
+    height: 25em;
+    width: 100%;
+    object-fit: cover;
+}
+
 /*about*/
 .about-image-wrapper {
     width: 100%;
@@ -241,6 +242,10 @@ ul li {
     display: inline;
     margin: 10px 50px;
     background: transparent;
+}
+
+.about-image-wrapper a {
+    text-decoration: none;
 }
 
 .about-image {
@@ -323,7 +328,7 @@ table td:nth-child(n+2) {
 }
 
 /*********************************************************************************/
-/* Social Icons                                                                  */
+/* External Links                                                                */
 /*********************************************************************************/
 #external_links {
     text-align: center;
@@ -419,4 +424,42 @@ ul.error {
 
 .input_container textarea {
     height: 100px;
+}
+
+#thanks {
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 740px) {
+    #header {
+        text-align: center;
+    }
+
+    #logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0px 25px;
+    }
+
+    #menu {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    #featured {
+        height: 15em;
+    }
+
+    #featured img {
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .about-image {
+        height: 100px;
+    }
 }
