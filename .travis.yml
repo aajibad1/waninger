@@ -20,7 +20,7 @@ deploy:
     secure: $AWSEBS_KEY
   region: "us-east-1"
   app: "waninger"
-  env: "Waninger-env"
+  env: "Waninger-env-1"
   bucket_name: "elasticbeanstalk-us-east-1-701856502070"
 
 after_success:
