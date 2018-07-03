@@ -6,7 +6,7 @@ This module implements the flask application, blueprints, and routes.
 
 from email.mime.text import MIMEText
 from flask import Blueprint, Flask, render_template, request
-import settings
+import os
 import smtplib
 from wtforms import Form, StringField, SubmitField, TextAreaField, validators
 
@@ -84,25 +84,25 @@ def thanks():
 def send_mail(text, to):
     msg = MIMEText(text)
     msg['Subject'] = 'resume contact'
-    msg['From'] = settings.SMTP_EMAIL
+    msg['From'] = os.environ['SMTP_EMAIL']
     msg['To'] = to
 
     # start a session
     session = smtplib.SMTP(
-        settings.SMTP_GATEWAY,
-        settings.SMTP_PORT
+        os.environ['SMTP_GATEWAY'],
+        os.environ['SMTP_PORT']
     )
 
     # initiate TLS and login
     session.starttls()
     session.login(
-        settings.SMTP_EMAIL,
-        settings.SMTP_PASSWORD
+        os.environ['SMTP_EMAIL'],
+        os.environ['SMTP_PASSWORD']
     )
 
     # send the email
     session.sendmail(
-        settings.SMTP_EMAIL,
+        os.environ['SMTP_EMAIL'],
         to,
         msg.as_string()
     )
