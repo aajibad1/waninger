@@ -11,6 +11,7 @@ body {
     font-weight: 300;
     color: #6c6c6c;
     min-width: 510px;
+    max-width: 1450px;
 }
 
 ul li {
