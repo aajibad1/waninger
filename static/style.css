@@ -389,7 +389,7 @@ table td:nth-child(n+2) {
 
 #contact_form .input:hover,
 #contact_form .input:active {
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 10px #FF4600;
 }
 
 ul.error {
