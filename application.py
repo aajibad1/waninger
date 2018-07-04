@@ -12,7 +12,7 @@ import smtplib
 from wtforms import Form, StringField, SubmitField, TextAreaField, validators
 
 
-DEBUG = True
+DEBUG = False
 
 
 BP = Blueprint(
@@ -44,6 +44,11 @@ def home():
     """register route to home"""
     result = dict(featured=f'/static/featured/{str(np.random.choice(len(os.listdir()), 1)[0]+1)}.jpg')
     return render_template('index.html', result=result)
+
+
+@BP.route('/get_random_featured')
+def get_random_featured():
+    return f'/static/featured/{str(np.random.choice(len(os.listdir()), 1)[0]+1)}.jpg'
 
 
 @BP.route('/projects')
