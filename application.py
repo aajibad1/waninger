@@ -6,9 +6,13 @@ This module implements the flask application, blueprints, and routes.
 
 from email.mime.text import MIMEText
 from flask import Blueprint, Flask, render_template, request
+import numpy as np
 import os
 import smtplib
 from wtforms import Form, StringField, SubmitField, TextAreaField, validators
+
+
+DEBUG = True
 
 
 BP = Blueprint(
@@ -38,7 +42,8 @@ class ContactForm(Form):
 @BP.route('/')
 def home():
     """register route to home"""
-    return render_template('index.html')
+    result = dict(featured=f'/static/banner_{str(np.random.choice(len(os.listdir()), 1)[0]+1)}.jpg')
+    return render_template('index.html', result=result)
 
 
 @BP.route('/projects')
@@ -112,4 +117,4 @@ application = Flask(__name__)
 application.register_blueprint(BP)
 
 if __name__ == '__main__':
-    application.run()
+    application.run(debug=DEBUG)

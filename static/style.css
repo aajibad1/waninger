@@ -3,9 +3,9 @@ html, body {
 }
 
 body {
-    margin: 0px;
+    margin: 0px auto;
     padding: 0px;
-    background: #242424;
+    background: #3e3e3e;
     font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
     font-weight: 300;
@@ -20,39 +20,6 @@ ul li {
 
 .container {
     margin: 0px auto;
-}
-
-/*********************************************************************************/
-/* Image Style                                                                   */
-/*********************************************************************************/
-.image {
-    display: inline-block;
-}
-
-.image img {
-    display: block;
-    width: 100%;
-}
-
-.image-full {
-    display: block;
-    width: 100%;
-    margin: 0 0 2em 0;
-}
-
-.image-left {
-    float: left;
-    margin: 0 2em 2em 0;
-}
-
-.image-centered {
-    display: block;
-    margin: 0 0 2em 0;
-}
-
-.image-centered img {
-    margin: 0 auto;
-    width: auto;
 }
 
 /*********************************************************************************/
@@ -86,6 +53,7 @@ ul li {
 #header {
     position: relative;
     height: 130px;
+    background: #323232;
 }
 
 #logo {
@@ -223,11 +191,11 @@ ul li {
 
 /*featured*/
 #featured {
-    height: 25em;
+    height: 30em;
 }
 
 #featured img {
-    height: 25em;
+    height: 30em;
     width: 100%;
     object-fit: cover;
 }
@@ -390,6 +358,7 @@ table td:nth-child(n+2) {
 #contact_form .input:hover,
 #contact_form .input:active {
     box-shadow: 0 0 10px #FF4600;
+    border: 1px solid #FF4600;
 }
 
 ul.error {
