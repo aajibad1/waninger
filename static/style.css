@@ -10,7 +10,7 @@ body {
     font-size: 11pt;
     font-weight: 300;
     color: #6c6c6c;
-    min-width: 510px;
+    min-width: 632px;
     max-width: 1450px;
 }
 
@@ -48,12 +48,18 @@ ul li {
 /*********************************************************************************/
 #header-wrapper {
     border-top: 8px solid #FF4600;
+    background: #323232;
 }
 
 #header {
     position: relative;
     height: 130px;
-    background: #323232;
+    margin: 0 1in;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #logo {
@@ -61,7 +67,11 @@ ul li {
     top: 1em;
     left: 0;
     width: 100%;
-    padding: 0px 25px;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #logo h1 {
@@ -84,10 +94,19 @@ ul li {
     position: absolute;
     right: 0;
     top: 0;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #menu ul {
     display: inline-block;
+}
+
+#menu ul li:nth-child(3) {
+    margin-right: -20px;
 }
 
 #menu li {
@@ -110,6 +129,11 @@ ul li {
     text-transform: uppercase;
     outline: 0;
     color: #898989;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #menu li:hover a, #menu li.active a, #menu li.active span {
@@ -173,8 +197,8 @@ ul li {
 
 #content {
     position: relative;
-    height: 80%;
-    padding: 0 20px;
+    height: 100%;
+    padding: 50px 1in;
 }
 
 #content ul {
@@ -187,24 +211,36 @@ ul li {
     font-size: 18px;
     margin-bottom: 25px;
     text-align: justify;
+    padding: 0;
 }
 
 /*featured*/
 #featured {
     height: 30em;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #featured img {
     height: 30em;
     width: 100%;
     object-fit: cover;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 /*about*/
 .about-image-wrapper {
     width: 100%;
-    text-align: center;
+    text-align: center;;
     padding-bottom: 20px;
+    margin-top: .5in
 }
 
 .about-image-inner-wrapper {
@@ -219,11 +255,11 @@ ul li {
 
 .about-image {
     height: 180px;
-    -moz-transition: all 0.25s ease-in-out;
-    -webkit-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .about-heading {
@@ -267,7 +303,7 @@ ul li {
 }
 
 .resume-heading h2 {
-    margin-bottom: 5px;
+    margin: 0px 5px;
 }
 
 #experience h3 {
@@ -288,10 +324,16 @@ table {
 
 table td {
     margin: 10px 5px;
-    padding: 5px 0px;
+    padding: 5px 0;
     border: none;
 }
 
+table td:nth-child(2) {
+    min-width: 100px;
+}
+table td:nth-child(3) {
+    min-width: 225px;
+}
 table td:nth-child(n+2) {
     text-align: center;
 }
@@ -401,7 +443,7 @@ ul.error {
     text-align: center;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 985px) {
     #header {
         text-align: center;
     }
@@ -419,12 +461,22 @@ ul.error {
         margin-top: 15px;
     }
 
+    #menu li span {
+        font-size: .6em;
+    }
+
     #featured {
         height: 15em;
     }
 
     #featured img {
         height: 15em;
+    }
+
+    #content {
+        padding: 20px 40px;
+        -webkit-transition: all .8s; /* Safari */
+        transition: all .8s;
     }
 }
 

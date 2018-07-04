@@ -42,7 +42,7 @@ class ContactForm(Form):
 @BP.route('/')
 def home():
     """register route to home"""
-    result = dict(featured=f'/static/banner_{str(np.random.choice(len(os.listdir()), 1)[0]+1)}.jpg')
+    result = dict(featured=f'/static/featured/{str(np.random.choice(len(os.listdir()), 1)[0]+1)}.jpg')
     return render_template('index.html', result=result)
 
 
