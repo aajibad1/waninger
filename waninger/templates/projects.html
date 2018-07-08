@@ -12,8 +12,8 @@
                 </a>
             </div>
             <p>
-                Building this site gave me the opportunity to learn quite a few new technologies. AWS Elastic
-                Beanstalk, AWS RDS, Azure Notebooks, Travis, Coveralls, and more.
+                Building this site gave me the opportunity to learn quite a few new technologies within the AWS
+                services umbrella. Specifically, this site is hosted using <a href="#">Elastic Beanstalk</a>.
             </p>
         </div>
 
@@ -30,7 +30,11 @@
             </div>
             <p>A team of three - Mohammed Helal, Vivek Reddy, and myself - performed topic modeling using LDA over the
                 Reddit joke dataset. This was an exploratory project to more fully understand the nature of LDA and
-                its limitations.</p>
+                its limitations. Using R and unsupervised learning techniques, we found 50 separate joke topics.
+                More or less could have been found but in the end we chose 50 as a good number for K. This gave us
+                quite a few topics yet each are clearly defined as you'll see in the live demo by clicking the AWS
+                logo to the right. This, to me, is one of the most interesting aspects of the project.
+            </p>
         </div>
 
         <!--River Runners -->
@@ -52,6 +56,11 @@
                 Runner provides predictions of daily average river flow rates seven days in advance. Results are
                 shown on a plot along with the maximum and minimum runnable flow rates so paddlers can easily see
                 whether the river is predicted to be runnable.
+
+                Scalability was a major characteristic we kept in mind during the development of this project.
+                Currently we're only predicting flow rates for the state of Washington but this can easily be
+                expanded to more states as required. Feel free to send me an email if you'd like any specific
+                kayaking runs added to the list!
             </p>
         </div>
 
@@ -66,12 +75,20 @@
                     <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
                 </a>
             </div>
-            <p>The notebook, SVMKernels.ipynb, displays my implementation of a kernel-based Support Vector Machine.
+            <p>
+                The notebook, SVMKernels.ipynb, displays my implementation of a kernel-based Support Vector Machine.
                 The SVM class is implemented in the notebook while supporting classes and code was implemented in
-                source.py. The source code was extracted from the notebook inorder to maintain readability and keep
+                source.py. The source code was extracted from the notebook in order to maintain readability and keep
                 the notebook focused on the SVM itself rather than other required components (i.e. One vs Rest
                 classifier, parallel progress bar, etc). However, I find both files quite interesting for various
                 reasons.
+
+                The SVM itself was implemented using the Huberized (smooth) hinge-loss and L2 regularization.
+                Additionally, several kernels were implemented as well: Radial Bias (RBF/Gaussian), polynomial,
+                sigmoid, and more. Click the Github logo to the right to see the code. Or, click the Azure logo to
+                see the live notebook. It's a useful learning tool to play with the different kernels seeing which
+                most accurately maps to the function being optimized. The demo also shows a comparison to
+                scikit-learn's SVM implementation.
             </p>
         </div>
 
@@ -90,7 +107,9 @@
                 The file logistic_regression.py is my implementation of a logistic regression classifier with L2
                 regularization. The optimization problem is solved using the fast-gradient descent algorithm. The
                 classifier uses the inverse of the Lipshitz constant to calculate the initial learning rate and uses
-                backtracking line search to update the learning rate through successive iterations.
+                backtracking line search (w/the Armijo stopping condition) to update the learning rate through
+                successive iterations. The combination of fast-gradient and backtracking line search is shown to
+                optimize much more quickly than gradient descent alone.
             </p>
             <p>
                 Jupyter notebook demos for a simulated dataset and the well known Digits dataset are included as
@@ -109,7 +128,9 @@
                     <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
                 </a>
             </div>
-            <p>A collection of widgets and snippets I've been building for scientific computing in Python.</p>
+            <p>A collection of widgets and code snippets I've been building for scientific computing in Python. Feel
+                free to clone/fork/pull request!
+            </p>
         </div>
     </div>
 {% endblock %}
