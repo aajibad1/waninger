@@ -12,7 +12,14 @@ import smtplib
 from wtforms import Form, StringField, SubmitField, TextAreaField, validators
 
 
-DEBUG = False
+DEBUG = True
+
+if DEBUG:
+    try:
+        from settings import load_environment
+        load_environment()
+    except:
+        pass
 
 
 BP = Blueprint(
