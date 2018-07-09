@@ -455,20 +455,23 @@ ul.error {
 @media screen and (max-width: 985px) {
     #header {
         text-align: center;
+        height: 110px;
     }
 
     #logo {
         position: absolute;
-        top: 0;
+        line-height: 10px;
+        top: .5em;
         left: 0;
         width: 100%;
-        padding: 0px 25px;
+        padding: 0 25px;
         z-index: 1;
     }
 
     #menu {
         width: 100%;
-        margin-top: 15px;
+        height: 20px;
+        margin-top: 10px;
     }
 
     #menu li span {
