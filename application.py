@@ -12,7 +12,7 @@ import smtplib
 from wtforms import Form, StringField, SubmitField, TextAreaField, validators
 
 
-DEBUG = True
+DEBUG = False
 
 if DEBUG:
     try:
