@@ -107,7 +107,7 @@ def send_mail(text, to):
     # start a session
     session = smtplib.SMTP(
         os.environ['SMTP_GATEWAY'],
-        os.environ['SMTP_PORT']
+        587  # os.environ['SMTP_PORT']
     )
 
     # initiate TLS and login
