@@ -1,16 +1,21 @@
+# development
 .idea/
-
 *__pycache__*
 *.pytest_cache*
 *.pyc
-
-.coverage
-
 *.egg-info
 
-build/
 
+# deployment
+.coverage
+build/
+*.jpg
+
+
+# secret
 settings.py
+
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
