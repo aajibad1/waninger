@@ -20,9 +20,11 @@
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
+            <div id="profile_pic">
+                <img src="{{ url_for('static', filename='profile_pic.jpg') }}" />
+            </div>
 			<h1><a href="{{ url_for('default.home') }}">Luke Waninger</a></h1>
-		</div>
-		<div id="menu">
+				<div id="menu">
 			<ul>
 				<li><a href="{{ url_for('default.projects') }}" title="">Projects</a></li>
 				<li><a href="{{ url_for('default.resume') }}" title="">Resume</a></li>
