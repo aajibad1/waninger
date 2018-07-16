@@ -12,11 +12,6 @@ build/
 *.jpg
 
 
-# misc
-thanks.png
-thanks.psd
-
-
 # secret
 settings.py
 
