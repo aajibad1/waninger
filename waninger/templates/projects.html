@@ -3,20 +3,6 @@
 
 {%  block content %}
     <div id="content" class="container">
-        <!--This Website -->
-        <div class="project">
-            <div class="project-title">
-                <h2>This Website</h2>
-                <a href="https://github.com/lukeWaninger/waninger" target="_blank" title="Github">
-                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
-                </a>
-            </div>
-            <p>
-                Building this site gave me the opportunity to learn quite a few new technologies within the AWS
-                services umbrella. Specifically, this site is hosted using <a href="#">Elastic Beanstalk</a>.
-            </p>
-        </div>
-
         <!-- Reddit -->
         <div class="project">
             <div class="project-title">
@@ -27,13 +13,26 @@
                 <a href="https://github.com/lukeWaninger/Reddit-Topic-Modeling" target="_blank" title="Github">
                     <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
                 </a>
+                <a href="#" target="_blank" title="Project Report">
+                    <img src="{{ url_for('static', filename='pdf.png') }}" alt="Project Report" />
+                </a>
             </div>
-            <p>A team of three - Mohammed Helal, Vivek Reddy, and myself - performed topic modeling using LDA over the
-                Reddit joke dataset. This was an exploratory project to more fully understand the nature of LDA and
-                its limitations. Using R and unsupervised learning techniques, we found 50 separate joke topics.
-                More or less could have been found but in the end we chose 50 as a good number for K. This gave us
-                quite a few topics yet each are clearly defined as you'll see in the live demo by clicking the AWS
-                logo to the right. Please be patient as the large dataset will take time to load.
+            <p>
+                Text data is one of the most abundant sources of data available today, yet it is one of the most
+                difficult sources to understand and gain insight from. We chose to tackle this problem in a tagteam
+                approach of using machine learning and effective data visualization techniques to help us understand                 the topics of a
+                dataset. We used a dataset scraped from Reddit’s r/jokes subreddit and implemented a topic modelling
+                algorithm to derive joke topics, and then implemented a visualization in d3 to maximize the ability
+                of a user to understand these topics.
+            </p>
+            <p>
+                A team of three - Mohammed Helal, Vivek Pagadala, and myself - performed this topic modeling using
+                Latent Dirichlet allocation.  To do this we used a standardized 5 step approach to designing a user
+                interface and experience: The Five Design-Sheet (FdS) approach for Sketching Information
+                Visualization Designs by J. C. Roberts. More on this approach can be found at <a
+                    href="http://pages.bangor.ac.uk/~pas601/papers/FdS-Roberts-2011.pdf" target="_blank">FDS</a>
+
+                The project report, source code, and final product can be accessed through the linked images above.
             </p>
         </div>
 
