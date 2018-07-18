@@ -4,7 +4,7 @@
 This module implements the flask application, blueprints, and routes.
 """
 
-from flask import Blueprint, Flask, render_template, request
+from flask import Blueprint, Flask, render_template, send_from_directory
 import numpy as np
 import os
 
@@ -23,6 +23,11 @@ BP = Blueprint(
     'default', __name__,
     template_folder='waninger/templates'
 )
+
+
+@BP.route('/downloads/<path:filename>', methods=['GET', 'POST'])
+def download(filename):
+    return send_from_directory(directory='static', filename=filename, as_attachment=True)
 
 
 @BP.route('/')
