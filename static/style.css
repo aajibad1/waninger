@@ -3,8 +3,8 @@ html, body {
 }
 
 body {
-    margin: 0px auto;
-    padding: 0px;
+    margin: 0 auto;
+    padding: 0;
     background: #3e3e3e;
     font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
@@ -19,7 +19,7 @@ ul li {
 }
 
 .container {
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 a {

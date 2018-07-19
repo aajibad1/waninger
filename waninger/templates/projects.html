@@ -103,7 +103,7 @@
                 <a href="https://notebooks.azure.com/lukewaninger/libraries/LogisticRegression" target="_blank">
                      <img src="{{ url_for('static', filename='azure.png') }}" alt="Azure Notebooks"/>
                 </a>
-                <a href="#" target="_blank" title="Github">
+                <a href="https://github.com/lukeWaninger/LogisticRegression" target="_blank" title="Github">
                     <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
                 </a>
                 <a href="/downloads/logistic_regression_proof.pdf" target="_blank" title="Project Report">
@@ -124,5 +124,49 @@
                 clicking the pdf icon above.
             </p>
         </div>
-    </div>
+
+        <div class="project">
+            <div class="project-title">
+                <h2>Call Center Exploration</h2>
+                <a href="https://notebooks.azure.com/lukewaninger/libraries/CallCenterExploration" target="_blank">
+                     <img src="{{ url_for('static', filename='azure.png') }}" alt="Azure Notebooks"/>
+                </a>
+                <a href="https://github.com/lukeWaninger/CallCenterExploration" target="_blank" title="Github">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="Github"/>
+                </a>
+            </div>
+            <p>
+                The purpose of this project was to gain insights into call center tickets and provide the leadership
+                team with findings and recommendations. The overarching idea going into the project was that user
+                behavior may have an impact on tickets closed through 'user education' rather than spending other
+                company resources. I go through data understanding, visualization, normalization, and imputation
+                followed by insights and recommendations.
+            </p>
+            <p>
+                Additionally, I demo a generalized producer-consumer pattern of parallelization for fitting models
+                and performing grid-search. The implementation of the prod-con mapping function is located within
+                notebook_init.py. The power and beauty of Plotly visualizations is also demonstrated throughout the
+                notebook. To view the entire notebook it must be ran with Python 3.6 in trusted mode.
+            </p>
+        </div>
+        <!-- TEMPLATE
+        <div class="project">
+                <div class="project-title">
+                    <h2></h2>
+                    <a href="#" target="_blank">
+                         <img src="" alt="Azure Notebooks"/>
+                    </a>
+                    <a href="#" target="_blank" title="Github">
+                        <img src="" alt="Github"/>
+                    </a>
+                    <a href="#" target="_blank" title="Project Report">
+                        <img src="" alt="Project Report" />
+                    </a>
+                </div>
+                <p>
+
+                </p>
+            </div>
+        </div>
+        -->
 {% endblock %}
