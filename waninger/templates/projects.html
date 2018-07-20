@@ -61,10 +61,25 @@
                 runnable flow rates so paddlers can easily see whether the river is predicted to be runnable.
             </p>
             <p>
-                Scalability was a major characteristic we kept in mind during the development of this project.
-                Currently we're only predicting flow rates for the state of Washington but this can easily be
-                expanded to more states as required. Feel free to send me an email if you'd like any specific
-                kayaking runs added to the list!
+                For many sports that are weather-dependent, modern day weather forcasting provides relatively
+                accurate predictions of conditions up to ten days in advance making it relatively easy to plan ahead
+                for any outdoor activities. For whitewater kayaking however, there are currently no reliable tools
+                which can predict a river’s flow rate, meaning paddlers are often left to figure out whether they
+                can run a given river less than a day in advance or even the morning of their planned trip.
+                Especially for newer paddlers who have fewer choices of rivers to run, or paddlers who have to plan
+                ahead for traveling longer distances to get to the river, this can lead to many cancelled trips and
+                dissapointing weekends without paddling. Being able to get a sense of what rivers might be runnable
+                further than a day or two in advance would undoubtedly help many paddlers get the most of their time
+                on the river.
+            </p>
+            <p>
+                With RiverRunner, the goal is to provide paddlers in Washington1 with a simple web-based tool that
+                will allow them to see a prediction of a given river run’s flow rate in order to help plan future
+                kayaking trips. By using autoregressive integrated moving average (ARIMA) models on public USGS
+                historical river flow rate data, along with exogenous regressors such as precipitation, snow pack,
+                and temperature, we hope to provide accurate predictions of daily average river flow rates up to two
+                weeks in advance. The tool will be relatively simple to create and maintain, easy to use, and will
+                provide a clear benefit to the whitewater community in Washington State.
             </p>
         </div>
 
