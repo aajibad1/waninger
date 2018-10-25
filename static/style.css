@@ -296,6 +296,9 @@ a:hover {
     -ms-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
+.about-image:hover {
+    height: 190px;
+}
 
 .about-heading {
     display: inline !important;
