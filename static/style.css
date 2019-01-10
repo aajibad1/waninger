@@ -357,10 +357,10 @@ a:hover {
     padding: 30px 0 75px 0 !important;
 }
 
-#publications-list ol {
+#publications-list {
     padding-left: 15px;
 }
-#publications-list ol li {
+#publications-list li {
     padding-left: 10px;
     margin-botthom: 10px;
 }
